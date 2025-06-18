@@ -1,16 +1,37 @@
 {
-  "name": "ccdcc",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.8.1",
-  "devDependencies": {
-    "@biomejs/biome": "^2.0.0"
-  }
+	"name": "ccdcc",
+	"version": "0.0.1",
+	"description": "",
+	"main": "dist/index.js",
+	"bin": {
+		"ccdcc": "./dist/index.js"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite build --watch",
+		"start": "node dist/index.js",
+		"typecheck": "tsc --noEmit",
+		"format": "pnpm biome format --write .",
+		"lint": "pnpm biome lint .",
+		"check": "pnpm biome check --write .",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "Apache-2.0",
+	"packageManager": "pnpm@10.12.1",
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.0",
+		"@types/node": "^24.0.3",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5"
+	},
+	"dependencies": {
+		"@anthropic-ai/claude-code": "^1.0.27",
+		"@types/inquirer": "^9.0.8",
+		"chalk": "^5.4.1",
+		"commander": "^14.0.0",
+		"inquirer": "^12.6.3"
+	}
 }
