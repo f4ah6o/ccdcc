@@ -26,11 +26,12 @@
 - 基本的なCLI機能
 - Claude Code統合
 - テクニカルライティング品質チェック（効果性・効率性・満足度）
+- ドキュメント生成機能（README、CLAUDE.md、スライド）
 
 ### 開発中
 - プロジェクト初期化機能
-- ドキュメント生成機能
 - メタデータ管理
+- 高度なドキュメント生成形式
 
 ## 技術スタック
 
@@ -58,6 +59,11 @@ ccdcc ask -p "質問内容"
 
 # インタラクティブモード
 ccdcc interactive
+
+# ドキュメント生成
+ccdcc gen readme --scope overview --context user
+ccdcc gen claude --scope detailed --context developer
+ccdcc gen slides --scope overview --context general
 ```
 
 ### 開発コマンド
@@ -104,3 +110,11 @@ pnpm run check
 - 図表生成機能
 - 意思決定履歴管理
 - メタ分析機能
+
+## ISSUES
+
+1. gen実行中の進捗表示
+2. gen slidesのフォーマットをmarpにする
+   - reference/makeslide を読むこと
+3. テスト
+   - vitest
