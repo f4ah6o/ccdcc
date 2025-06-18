@@ -1,0 +1,31 @@
+# CCDCC Project Configuration
+project:
+  name: "ccdcc"
+  description: "Claude Code Document Content Control Framework"
+  version: "0.0.1"
+  
+content:
+  source_dir: "content/raw"
+  refined_dir: "content/refined"
+  
+metadata:
+  scope_file: "metadata/scope.yaml"
+  context_file: "metadata/context.yaml"
+  
+output:
+  base_dir: "output"
+  formats:
+    - slides
+    - reports
+    - docs
+    
+decisions:
+  log_dir: "decisions"
+  
+linting:
+  criteria:
+    - effectiveness  # 効果性
+    - efficiency     # 効率性
+    - satisfaction   # 満足度
+  auto_fix: false
+  output_refined: true

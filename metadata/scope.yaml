@@ -1,0 +1,37 @@
+# スコープ定義
+
+scopes:
+  overview:
+    name: "概要レベル"
+    description: "プロジェクトの全体像と主要ポイントの把握"
+    target_length: "short"
+    detail_level: "high-level"
+    focus_areas:
+      - "プロジェクトの目的と価値"
+      - "主要機能"
+      - "基本的な使用方法"
+    
+  detailed:
+    name: "詳細レベル"
+    description: "実装詳細と具体的な手順を含む包括的な情報"
+    target_length: "long"
+    detail_level: "detailed"
+    focus_areas:
+      - "技術仕様"
+      - "実装方法"
+      - "設定手順"
+      - "トラブルシューティング"
+    
+  reference:
+    name: "リファレンスレベル"
+    description: "API仕様やコマンドリファレンスなど参照用の情報"
+    target_length: "comprehensive"
+    detail_level: "exhaustive"
+    focus_areas:
+      - "全コマンド一覧"
+      - "オプション詳細"
+      - "例外処理"
+      - "関連情報"
+
+# デフォルトスコープ
+default_scope: "overview"

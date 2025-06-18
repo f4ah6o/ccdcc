@@ -1,0 +1,74 @@
+# コンテキスト定義
+
+contexts:
+  developer:
+    name: "開発者"
+    description: "技術的な実装を行うソフトウェア開発者"
+    technical_level: "high"
+    primary_interests:
+      - "実装詳細"
+      - "アーキテクチャ"
+      - "APIリファレンス"
+      - "ベストプラクティス"
+    language_style: "technical"
+    preferred_formats:
+      - "code_examples"
+      - "api_documentation"
+      - "technical_specifications"
+    
+  user:
+    name: "エンドユーザー"
+    description: "ツールを使用する一般ユーザー"
+    technical_level: "medium"
+    primary_interests:
+      - "使用方法"
+      - "機能説明"
+      - "トラブルシューティング"
+      - "FAQ"
+    language_style: "friendly"
+    preferred_formats:
+      - "tutorials"
+      - "user_guides"
+      - "faqs"
+    
+  manager:
+    name: "マネージャー"
+    description: "プロジェクト管理や意思決定を行う管理者"
+    technical_level: "low"
+    primary_interests:
+      - "プロジェクト概要"
+      - "ビジネス価値"
+      - "リソース要件"
+      - "ロードマップ"
+    language_style: "business"
+    preferred_formats:
+      - "executive_summary"
+      - "presentations"
+      - "reports"
+    
+  contributor:
+    name: "コントリビューター"
+    description: "オープンソースプロジェクトに貢献する開発者"
+    technical_level: "high"
+    primary_interests:
+      - "コントリビューションガイド"
+      - "開発環境セットアップ"
+      - "コーディング規約"
+      - "PR プロセス"
+    language_style: "collaborative"
+    preferred_formats:
+      - "contributing_guides"
+      - "development_setup"
+      - "coding_standards"
+
+# デフォルトコンテキスト
+default_context: "user"
+
+# コンテキスト組み合わせ
+context_combinations:
+  onboarding:
+    - "user"
+    - "developer"
+  maintenance:
+    - "developer"
+    - "contributor"
